@@ -5,8 +5,8 @@ header("Access-Control-Allow-Methods: POST");
 header("Content-Type: application/json");
 
 // Razorpay credentials
-$key_id = "rzp_live_nfiAYWnEIyDJe3"; // ✅ Your live Key ID
-$key_secret = "7sBfaUhmAfXlMnXfn7nAUtdB"; // 🔴 Replace this with your Razorpay live Key Secret
+$key_id = ""; // ✅ Your live Key ID
+$key_secret = ""; // 🔴 Replace this with your Razorpay live Key Secret
 
 // Get POST data
 $data = json_decode(file_get_contents("php://input"), true);
