@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- ✅ Favicon for search/browser tab -->
+  <link rel="icon" href="images/favicon.png" type="favicon.png"/>
+    <link rel="canonical" href="https://valleysurenutrition.in/contact.html">
+  <title>Contact Us - Valleysure Nutrition</title>
+  <meta name="description" content="Contact Valleysure Nutrition for premium supplements and personalized advice." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": "Contact Valleysure Nutrition",
+  "url": "https://valleysure.in/contact.html",
+  "description": "Get in touch with Valleysure Nutrition for inquiries, support, or personalized supplement recommendations."
+}
+  </script>
+
+  <style>
+    @media (max-width: 768px) {
+
+      .contact-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+  }
+
+  .contact-form-container,
+  .contact-details {
+    width: 100%;
+  }
+
+  .contact-form {
+    margin-bottom: 2rem;
+  }
+
+  iframe {
+    width: 100%;
+    height: 300px;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #fff;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 999;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  #hamburger {
+    display: block;
+    cursor: pointer;
+    padding: 10px;
+  }
+
+  #hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #383ab3;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+  }
+
+  #hamburger.active div:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  #hamburger.active div:nth-child(2) {
+    opacity: 0;
+  }
+  #hamburger.active div:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+}
+
+  </style>
+</head>
+<body>
+  
+  <!-- HEADER (reuse your global header) -->
+  <header class="navbar">
+    <div class="logo">
+      <a href="index.html"><img src="images/favicon.png" alt="Valleysure Nutrition Logo" /></a>
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">About Us</a></li>
+        <li><a href="product.html">Products</a></li>
+        <li><a href="blogs.html">Blogs</a></li>
+        <li><a href="contact.html" class="active">Contact Us</a></li>
+        <li>
+          <a href="checkout.html"><i class="fas fa-shopping-cart"></i><span id="cart-count"></span></a>
+        </li>
+      </ul>
+      <div id="hamburger" class="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT: CONTACT SECTION -->
+  <main>
+    <section class="contact-us">
+      <div class="contact-wrapper">
+        <!-- Left Column: Contact Form -->
+        <div class="contact-form-container">
+          <h1 class="section-title">Get in Touch</h1>
+          <form id="contactForm" class="contact-form">
+            <div class="inputBox">
+              <input type="text" id="name" name="name" placeholder=" " required />
+              <label for="name">Your Name</label>
+            </div>
+            <div class="inputBox">
+              <input type="email" id="email" name="email" placeholder=" " required />
+              <label for="email">Your Email</label>
+            </div>
+            <div class="inputBox">
+              <input type="tel" id="phone" name="phone" placeholder=" " required />
+              <label for="phone">Your Phone</label>
+            </div>
+            <div class="inputBox">
+              <textarea id="message" name="message" rows="4" placeholder=" " required></textarea>
+              <label for="message">Your Message</label>
+            </div>
+            <button type="submit" class="contact-form-btn">Send Message</button>
+          </form>
+        </div>
+        <!-- Right Column: Contact Details & Map/Social Links -->
+        <div class="contact-details">
+          <div class="map-container">
+            <!-- You can embed a Google Map iframe or put a placeholder image -->
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18..."
+              frameborder="0"
+              allowfullscreen=""
+              aria-hidden="false"
+              tabindex="0"
+            ></iframe>
+          </div>
+          <div class="social-links">
+            <p>Connect with us</p>
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-square"></i></a>
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter-square"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+<!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>Valleysure Nutrition</h3>
+        <ul>
+          <li><a href="index.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="product.html">Products</a></li>
+          <li><a href="blogs.html">Blogs</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Health &amp; Fitness</h3>
+        <ul>
+          <li><a href="#">Hair &amp; Skin Care</a></li>
+          <li><a href="#">Sports Nutrition</a></li>
+          <li><a href="#">Wellness</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#">My Account</a></li>
+          <li><a href="#">Store Locator</a></li>
+          <li><a href="#">FAQs</a></li>
+        </ul>
+      </div>
+<div class="footer-section">
+        <h3>Contact Us</h3>
+        <p>
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:valleysurehealth@gmail.com">valleysurehealth@gmail.com</a>
+        </p>
+        <p>
+          <i class="fas fa-phone"></i>
+          <a href="tel:917774825554">+91 777 482 5554</a>
+        </p>
+       <!-- <p>
+          <i class="fas fa-map-marker-alt"></i>
+          Unit No. 713, Devika Tower, New Delhi
+        </p> -->
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <ul>
+        <li><a href="#">Terms &amp; Conditions</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Return Policy</a></li>
+      </ul>
+      <p>&copy; 2025 valleysurenutrition.in</p>
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT -->
+  <script src="script.js" defer></script>
+  <script>
+      // ✅ Hamburger Menu Logic — This was wrongly placed inside the tab event
+  const hamburger = document.getElementById("hamburger");
+  const navLinks = document.querySelector(".nav-links");
+
+  if (hamburger && navLinks) {
+    hamburger.addEventListener("click", function () {
+      navLinks.classList.toggle("active");
+      document.body.classList.toggle("menu-open");
+      hamburger.classList.toggle("active");
+    });
+  }
+    // Simple demo for form submission
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("Thank you for reaching out! We will contact you soon.");
+      this.reset();
+    });
+  </script>
+</body>
+</html>

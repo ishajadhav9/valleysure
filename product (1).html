@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- ✅ Favicon for search/browser tab -->
+  <link rel="icon" href="images/favicon.png" type="favicon.png"/>
+    <link rel="canonical" href="https://valleysurenutrition.in/product.html">
+  <title>Our Products - Valleysure Nutrition</title>
+  <meta name="description" content="Discover our premium health supplements with advanced formulations and nutritional insights." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "Product",
+  "name": "Valleysure High Protein",
+  "image": "https://valleysure.in/images/2.0.png",
+  "description": "Premium protein supplement with MCT & HMB",
+  "brand": {
+    "@type": "Brand",
+    "name": "Valleysure Nutrition"
+  },
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "INR",
+    "price": "1298",
+    "availability": "https://schema.org/InStock"
+  }
+}
+</script>
+<style>
+
+  /* Define color variables */
+:root {
+    --color1: #ff5733;
+    --color2: #ffbd33;
+    --color3: #33ff57;
+    --color4: #3380ff;
+}
+
+/* Base slider and fade in animation */
+.slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slide {
+  width: 100%;
+  display: none;
+ 
+}
+
+.slide.active {
+  display: block;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Ensure images fill the slide container without distortion */
+.slider img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Tablet styles */
+@media (max-width: 768px) {
+  .slider {
+    max-width: 50%;    /* Limit the slider width to 90% of the viewport */
+    margin: 0 auto;    /* Center the slider in the viewport */
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 480px) {
+  .slider {
+    max-width: 80%;   /* On mobile, use the full width of the screen */
+    margin: 0 auto;
+    padding: 0 10px;   /* Optional padding to prevent content from touching the edges */
+  }
+}
+
+/* Banner Styling */
+#announcement-banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.5s ease, color 0.5s ease;
+    z-index: 1000;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #announcement-banner {
+        font-size: 16px;
+        padding: 12px;
+    }
+}
+  @media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #fff;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 999;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  #hamburger {
+    display: block;
+    cursor: pointer;
+    padding: 10px;
+  }
+
+  #hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #2f50e2;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+  }
+
+  #hamburger.active div:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  #hamburger.active div:nth-child(2) {
+    opacity: 0;
+  }
+  #hamburger.active div:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+}
+
+</style>
+</head>
+<body>
+  <!-- HEADER (Reuse your global header) -->
+  <header class="navbar">
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/favicon.png" alt="Valleysure Nutrition Logo" />
+      </a>
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">About Us</a></li>
+        <li><a href="products.html" class="active">Products</a></li>
+        <li><a href="blogs.html">Blogs</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li>
+          <a href="checkout.html">
+            <i class="fas fa-shopping-cart"></i>
+            <span id="cart-count"></span>
+          </a>
+        </li>
+      </ul>
+      <div id="hamburger" class="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- MAIN PRODUCTS SECTION -->
+  <main>
+
+
+
+
+
+    <section class="products">
+      <h2 class="products__title">Our Products</h2>
+      <div class="products__container">
+      
+
+        <!-- Product 1 -->
+<article class="product-detail" data-id="1">
+  <div class="product-gallery">
+<div class="slider">
+  <img data-src="images/product-big-1.jpg" src="images/high protein.png" alt="View 1" class="slide active" loading="lazy" />
+  <img data-src="images/product-big-2.jpg" src="images/high protei2.jpg" alt="View 2" class="slide" loading="lazy" />
+  <img data-src="images/product-big-3.jpg" src="images/high protei3.jpg" alt="View 3" class="slide" loading="lazy" />
+</div>
+  </div>
+  <div class="product-info">
+    <h1 class="product-title">Advanced High Protein Supplement 400g</h1>
+    <div class="product-meta">
+      <span class="sku">SKU: HP-001</span>
+      <div class="rating">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="far fa-star"></i>
+      </div>
+    </div>
+    <div class="product-price">
+      <!-- Displaying discounted price first with the original MRP struck-through -->
+      <span class="discounted-price">₹ 1,103.00</span>
+      <span class="original-price"><del>₹ 1,298.00</del></span>
+    </div>
+    <div class="product-description">
+      <p>
+       Valleysure High Protein is a scientifically designed nutritional supplement ideal for individuals recovering from illness, surgery, or physical weakness. It provides a rich source of high-quality whey protein, essential amino acids, and immune-boosting vitamins and minerals to support muscle recovery, improve immunity, and enhance energy levels.
+      </p>
+    </div>
+    <div class="product-details-tabs">
+      <ul class="tabs">
+        <li class="tab active" data-tab="description-1">Description</li>
+        <li class="tab" data-tab="ingredients-1">Ingredients</li>
+        <li class="tab" data-tab="reviews-1">Reviews</li>
+      </ul>
+      <div class="tab-content">
+        <div class="tab-panel active" id="description-1">
+          <p>
+            Valleysure High Protein is designed to help your body recover faster from infections, surgeries, and muscle loss. It’s packed with whey protein, vitamins, minerals, and antioxidants to support your immunity, strength, and energy.
+        </div>
+        <div class="tab-panel" id="ingredients-1">
+          <ul>
+            <li>Whey Protein Isolate44% Whey Protein Concentrate</li>
+            <li>Natural Ginseng (15mg/serving)</li>
+            <li>28 Vitamins & Minerals</li>
+            <li>Branched Chain Amino Acids (BCAA)</li>
+            <li>ALA Omega-3</li>
+            <li>Sucrose-free (safe for diabetics)</li>
+          </ul>
+        </div>
+        <div class="tab-panel" id="reviews-1">
+          <div class="reviews-container">
+            <div class="review">
+              <p>"My father used this after surgery. It really helped him gain strength faster."</p>
+              <span>- Meena, Mumbai</span>
+            </div>
+            <div class="review">
+              <p>"Taste is mild, easy to digest. No complaints!"</p>
+              <span>- Raj, Pune</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="product-actions">
+      <div class="quantity-selector">
+        <button class="decrease">-</button>
+        <input type="number" value="1" min="1" />
+        <button class="increase">+</button>
+      </div>
+      <button class="add-to-cart"
+        data-id="1"
+        data-name="High Protein"
+        data-price="1103.00"
+        data-image="images/high protein.png">
+        Add to Cart
+      </button>
+    </div>
+  </div>
+</article>
+
+        
+        <!-- Product 2 -->
+        <article class="product-detail" data-id="2">
+          <div class="product-gallery">
+   
+            <div class="slider">
+  <img data-src="images/product-big-1.jpg" src="images/diabetes.png" alt="View 1" class="slide active" loading="lazy" />
+  <img data-src="images/product-big-2.jpg" src="images/diabetes-2.jpg" alt="View 2" class="slide" loading="lazy" />
+  <img data-src="images/product-big-3.jpg" src="images/diabetes-3.jpg" alt="View 3" class="slide" loading="lazy" />
+</div>
+          </div>
+          <div class="product-info">
+            <h1 class="product-title">Valleysure Diabetes Care 400g</h1>
+            <div class="product-meta">
+              <span class="sku">SKU: DC-010</span>
+              <div class="rating">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+              </div>
+            </div>
+
+             <div class="product-price">
+      <!-- Displaying discounted price first with the original MRP struck-through -->
+      <span class="discounted-price">₹ 806.00</span>
+      <span class="original-price"><del>₹ 949.00</del></span>
+    </div>
+            <div class="product-description">
+              <p>
+                Valleysure Diabetes Care is a diabetes-friendly nutrition supplement created to help manage blood sugar levels while providing balanced energy and nutrients. Formulated with whey protein, high fiber, omega-3 fatty acids, and a blend of 28 vitamins and minerals, it supports insulin sensitivity, reduces hunger pangs, and boosts immunity. With a delicious taste and natural sweetener (Stevia), it’s the perfect between-meal drink for those living with diabetes.
+              </p>
+            </div>
+            <div class="product-details-tabs">
+              <ul class="tabs">
+                <li class="tab active" data-tab="description-10">Description</li>
+                <li class="tab" data-tab="ingredients-10">Ingredients</li>
+                <li class="tab" data-tab="reviews-10">Reviews</li>
+              </ul>
+              <div class="tab-content">
+                <div class="tab-panel active" id="description-10">
+                  <p>
+                   Specially made for people with diabetes, this formula helps manage sugar levels while keeping your body energized and full. It's enriched with protein, fiber, omega-3, and other nutrients for better sugar control, gut health, and overall strength.
+                  </p>
+                </div>
+                <div class="tab-panel" id="ingredients-10">
+                  <ul>
+                    <li>Whey Protein Concentrate</li>
+                    <li>L-Carnitine, L-Taurine</li>
+                    <li>ALA & DHA</li>
+                    <li>Inositol</li>
+                    <li>28 Vitamins & Minerals</li>
+                    <li>High Fiber</li>
+                    <li>Stevia (Natural Sweetener)</li>
+                    <li>Flavours: Vanilla & Cinnamon</li>
+                    <li>Sucrose-free</li>
+                  </ul>
+                </div>
+                <div class="tab-panel" id="reviews-10">
+                  <div class="reviews-container">
+                    <div class="review">
+                      <p>“Finally, a diabetes supplement that doesn’t spike sugar!”</p>
+                      <span>- Nitin, Delhi</span>
+                    </div>
+                    <div class="review">
+                      <p>“My sugar levels are more stable since I started this.”</p>
+                      <span>- Vandana, Surat</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-actions">
+              <div class="quantity-selector">
+                <button class="decrease">-</button>
+                <input type="number" value="1" min="1" />
+                <button class="increase">+</button>
+              </div>
+              <button class="add-to-cart"
+                data-id="2"
+                data-name="Diabetes Care"
+                data-price="809.00"
+                data-image="images/diabetes.png">
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </article>
+        
+        <!-- Product 3 -->
+        <article class="product-detail" data-id="3">
+          <div class="product-gallery">
+
+            <div class="slider">
+  <img data-src="images/product-big-1.jpg" src="images/peptide.png" alt="View 1" class="slide active" loading="lazy" />
+
+</div>
+          </div>
+          <div class="product-info">
+            <h1 class="product-title">Valleysure Peptide 400g</h1>
+            <div class="product-meta">
+              <span class="sku">SKU: PT-011</span>
+              <div class="rating">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+              </div>
+            </div>
+ <div class="product-price">
+      <!-- Displaying discounted price first with the original MRP struck-through -->
+      <span class="discounted-price">₹ 1,103.00</span>
+      <span class="original-price"><del>₹ 1,299.00</del></span>
+    </div>
+            <div class="product-description">
+              <p>
+                Valleysure Peptide is a specialized nutritional formula made with 100% whey peptides, designed for individuals with compromised digestion or recovering from abdominal surgeries. It provides quick and easy absorption of protein and essential nutrients, along with added MCTs for energy and powerful antioxidants like EPA, Lycopene, and Curcumin. This semi-elemental formula is ideal for hospital use, ICU patients, or anyone needing gentle yet effective nutrition support.
+              </p>
+            </div>
+            <div class="product-details-tabs">
+              <ul class="tabs">
+                <li class="tab active" data-tab="description-11">Description</li>
+                <li class="tab" data-tab="ingredients-11">Ingredients</li>
+                <li class="tab" data-tab="reviews-11">Reviews</li>
+              </ul>
+              <div class="tab-content">
+                <div class="tab-panel active" id="description-11">
+                  <p>
+                    Made with easily digestible whey peptides, this is the ideal choice for those recovering from surgery or with sensitive digestion. Helps in faster healing, better nutrient absorption, and boosting immunity.
+                  </p>
+                </div>
+                <div class="tab-panel" id="ingredients-11">
+                  <ul>
+                    <li>100% Whey Peptide</li>
+                    <li>28 Vitamins & Minerals</li>
+                    <li>70% MCT (Medium Chain Triglycerides)</li>
+                    <li>Low Electrolytes</li>
+                    <li>Sugar-free</li>
+                    <li>EPA, Lycopene, Curcumin</li>
+                    <li>Omega 3, L-Carnitine, Taurine</li>
+                    <li>BCAA, Dietary Fiber</li>
+                  </ul>
+                </div>
+                <div class="tab-panel" id="reviews-11">
+                  <div class="reviews-container">
+                    <div class="review">
+                      <p>“Great for my dad’s feeding tube after surgery.”</p>
+                      <span>- Prakash, Ahmedabad</span>
+                    </div>
+                    <div class="review">
+                      <p> “Very light on the stomach, good for critical care."</p>
+                      <span>- Jaya, Hyderabad</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-actions">
+              <div class="quantity-selector">
+                <button class="decrease">-</button>
+                <input type="number" value="1" min="1" />
+                <button class="increase">+</button>
+              </div>
+              <button class="add-to-cart"
+                data-id="3"
+                data-name="Peptide"
+                data-price="1103.00"
+                data-image="images/peptide.png">
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </article>
+        
+        <!-- Product 4 -->
+        <article class="product-detail" data-id="4">
+          <div class="product-gallery">
+            <div class="slider">
+  <img data-src="images/product-big-1.jpg" src="images/blcd.png" alt="View 1" class="slide active" loading="lazy" />
+  <img data-src="images/product-big-2.jpg" src="images/blcd-2.jpg" alt="View 2" class="slide" loading="lazy" />
+  <img data-src="images/product-big-3.jpg" src="images/blcd-3.jpg" alt="View 3" class="slide" loading="lazy" />
+ </div>
+          </div>
+          <div class="product-info">
+            <h1 class="product-title">Valleysure Balance Low Calorie Diet 400g</h1>
+            <div class="product-meta">
+              <span class="sku">SKU: LCD-012</span>
+              <div class="rating">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+              </div>
+            </div>
+ <div class="product-price">
+      <!-- Displaying discounted price first with the original MRP struck-through -->
+      <span class="discounted-price">₹ 918.00</span>
+      <span class="original-price"><del>₹ 1,080.00</del></span>
+    </div>
+            <div class="product-description">
+              <p>
+                Valleysure Balanced Low-Calorie Diet (BLCD) is a delicious, high-fiber, high-protein meal replacement shake specially crafted for weight management and obesity-related diabetes. Packed with Garcinia Cambogia, Omega-3, Green Tea, and 28 vital nutrients, it helps burn fat, control hunger, and support overall health. Simply replace one big meal a day with this low-calorie shake and take a smart step toward sustainable weight loss and improved quality of life.
+              </p>
+            </div>
+            <div class="product-details-tabs">
+              <ul class="tabs">
+                <li class="tab active" data-tab="description-12">Description</li>
+                <li class="tab" data-tab="ingredients-12">Ingredients</li>
+                <li class="tab" data-tab="reviews-12">Reviews</li>
+              </ul>
+              <div class="tab-content">
+                <div class="tab-panel active" id="description-12">
+                  <p>
+                    A meal replacement shake that helps with healthy weight loss. It’s packed with protein, fiber, and fat-burning natural ingredients. Just replace one meal a day to start seeing results.
+                  </p>
+                </div>
+                <div class="tab-panel" id="ingredients-12">
+                  <ul>
+                    <li>Garcinia Cambogia</li>
+                    <li>High Fiber (Wheat, Oat, FOS, Inulin)</li>
+                    <li>Omega-3</li>
+                    <li>28 Vitamins and Minerals</li>
+                    <li>DHA, Cinnamon, Moringa, Green Tea Extract</li>
+                    <li>Low GI Carbohydrates (Fructose Based)
+
+</li>
+                  </ul>
+                </div>
+                <div class="tab-panel" id="reviews-12">
+                  <div class="reviews-container">
+                    <div class="review">
+                      <p> “Lost 2 kg in 3 weeks by replacing dinner with BLCD.”</p>
+                      <span>- Avni Thane</span>
+                    </div>
+                    <div class="review">
+                      <p>“Tastes like chocolate, keeps you full!</p>
+                      <span>- Abhishek, Lucknow</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-actions">
+              <div class="quantity-selector">
+                <button class="decrease">-</button>
+                <input type="number" value="1" min="1" />
+                <button class="increase">+</button>
+              </div>
+              <button class="add-to-cart"
+                data-id="4"
+                data-name="blcd"
+                data-price="918.00"
+                data-image="images/blcd.png">
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </article>
+        
+        <!-- Product 5 -->
+        <article class="product-detail" data-id="5">
+          <div class="product-gallery">
+            <div class="slider">
+  <img data-src="images/product-big-1.jpg" src="images/wpi.png" alt="View 1" class="slide active" loading="lazy" />
+
+</div>
+          </div>
+          <div class="product-info">
+            <h1 class="product-title">Valleysure WPI - 12g x 10 sachets</h1>
+            <div class="product-meta">
+              <span class="sku">SKU: WPI-013</span>
+              <div class="rating">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+              </div>
+            </div>
+ <div class="product-price">
+      <!-- Displaying discounted price first with the original MRP struck-through -->
+      <span class="discounted-price">₹ 840.00</span>
+      <span class="original-price"><del>₹ 989.00</del></span>
+    </div>
+            <div class="product-description">
+              <p>
+                Valleysure Whey Protein Isolate (WPI) delivers high-quality, pure protein in a tasteless, odorless, and colorless form. It’s ideal for people looking to boost their daily protein intake without altering the taste of their food or drinks. Safe for diabetics, cancer patients, and those with lactose intolerance, Valleysure WPI supports lean muscle mass, enhances immunity, and aids in recovery—making it a versatile and essential everyday supplement.
+              </p>
+            </div>
+            <div class="product-details-tabs">
+              <ul class="tabs">
+                <li class="tab active" data-tab="description-13">Description</li>
+                <li class="tab" data-tab="ingredients-13">Ingredients</li>
+                <li class="tab" data-tab="reviews-13">Reviews</li>
+              </ul>
+              <div class="tab-content">
+                <div class="tab-panel active" id="description-13">
+                  <p>
+                    A pure, tasteless protein powder perfect for daily protein needs. It’s ideal for people with lactose intolerance, diabetes, or those who want to build muscle and immunity without any sugar or flavour.
+                  </p>
+                </div>
+                <div class="tab-panel" id="ingredients-13">
+                  <ul>
+                    <li>100% Whey Protein Isolate (85%)</li>
+                    <li>Colourless, Odourless, Tasteless
+
+</li>
+                    <li>Sugar-free, Lactose-free, Gluten-free</li>
+               
+
+                  </ul>
+                </div>
+                <div class="tab-panel" id="reviews-13">
+                  <div class="reviews-container">
+                    <div class="review">
+                      <p> “Easy to mix with dal, roti or milk. Great for my parents.”</p>
+                      <span>- Deepika, Mumbai</span>
+                    </div>
+                    <div class="review">
+                      <p>“It’s helping me recover after chemotherapy.”</p>
+                      <span>- Mohan, Indore</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-actions">
+              <div class="quantity-selector">
+                <button class="decrease">-</button>
+                <input type="number" value="1" min="1" />
+                <button class="increase">+</button>
+              </div>
+              <button class="add-to-cart"
+                data-id="5"
+                data-name="WPI"
+                data-price="840.00"
+                data-image="images/wpi.png">
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </article>
+        
+        <!-- Product 6 -->
+        <article class="product-detail" data-id="6">
+          <div class="product-gallery">
+
+ <div class="slider">
+  <img data-src="images/product-big-1.jpg" src="images/2.0.png" alt="View 1" class="slide active" loading="lazy" />
+  <img data-src="images/product-big-2.jpg" src="images/2.0-2.jpg" alt="View 2" class="slide" loading="lazy" />
+  <img data-src="images/product-big-3.jpg" src="images/2.0.3.jpg" alt="View 3" class="slide" loading="lazy" />
+</div>
+          </div>
+          <div class="product-info">
+            <h1 class="product-title">Valleysure 2.0 – High Protein High Calorie</h1>
+            <div class="product-meta">
+              <span class="sku">SKU: VP2-015</span>
+              <div class="rating">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+              </div>
+            </div>
+ <div class="product-price">
+      <!-- Displaying discounted price first with the original MRP struck-through -->
+      <span class="discounted-price">₹ 1,274.00</span>
+      <span class="original-price"><del>₹ 1,499.00</del></span>
+    </div>
+            <div class="product-description">
+              <p>
+                Valleysure 2.0 is a high-protein, high-calorie formula designed to meet the intense nutritional needs of individuals with cancer, liver cirrhosis, or those in critical care. With 18g protein per serving and enriched with BCAAs, omega-3s, and antioxidants like Lycopene and Curcumin, it supports muscle mass, speeds recovery, and provides sustained energy—all with minimal fluid intake. This product is ideal for conditions where every calorie and gram of protein counts.
+              </p>
+            </div>
+            <div class="product-details-tabs">
+              <ul class="tabs">
+                <li class="tab active" data-tab="description-15">Description</li>
+                <li class="tab" data-tab="ingredients-15">Ingredients</li>
+                <li class="tab" data-tab="reviews-15">Reviews</li>
+              </ul>
+              <div class="tab-content">
+                <div class="tab-panel active" id="description-15">
+                  <p>
+                    A powerful nutritional drink for people who need high energy and protein in low volume—ideal for those with cancer, liver problems, or ICU recovery. It supports muscle strength, recovery, and overall wellness.
+                </div>
+                <div class="tab-panel" id="ingredients-15">
+                  <ul>
+                    <li>Whey Protein Isolate</li>
+                    <li>18g Protein / serving</li>
+                    <li>EPA, Lycopene, Curcumin</li>
+                    <li>28 Vitamins & Minerals</li>
+                  </ul>
+                </div>
+                <div class="tab-panel" id="reviews-15">
+                  <div class="reviews-container">
+                    <div class="review">
+                      <p>"Gave me the calorie push I needed!"</p>
+                      <span>- Shreyas T.</span>
+                    </div>
+                    <div class="review">
+                      <p>"Perfect for my bulking phase."</p>
+                      <span>- Alok S.</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-actions">
+              <div class="quantity-selector">
+                <button class="decrease">-</button>
+                <input type="number" value="1" min="1" />
+                <button class="increase">+</button>
+              </div>
+              <button class="add-to-cart"
+                data-id="6"
+                data-name="2.0 High Protein"
+                data-price="1274.00"
+                data-image="images/2.0.png">
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </article>
+        
+
+        <!-- Product 2 -->
+<article class="product-detail" data-id="7">
+  <div class="product-gallery">
+<div class="slider">
+  <img data-src="images/product-big-1.jpg" src="images/mct oil.png" alt="View 1" class="slide active" loading="lazy" />
+
+</div>
+  </div>
+
+  <div class="product-info">
+    <h1 class="product-title">Valleysure MCT Oil 100ml – Unflavoured</h1>
+    <div class="product-meta">
+      <span class="sku">SKU: MCT-100</span>
+      <div class="rating">
+        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+      </div>
+    </div>
+ <div class="product-price">
+      <!-- Displaying discounted price first with the original MRP struck-through -->
+      <span class="discounted-price">₹ 338.00</span>
+      <span class="original-price"><del>₹ 398.00</del></span>
+    </div>
+    <div class="product-description">
+      <p>
+        Boost your energy naturally with Valleysure MCT Oil. A potent source of C8 and C10 medium-chain triglycerides (60:40 ratio) for instant energy, mental clarity, and weight management.
+      </p>
+    </div>
+    <div class="product-details-tabs">
+      <ul class="tabs">
+        <li class="tab active" data-tab="description-2">Description</li>
+        <li class="tab" data-tab="ingredients-2">Ingredients</li>
+        <li class="tab" data-tab="reviews-2">Reviews</li>
+      </ul>
+      <div class="tab-content">
+        <div class="tab-panel active" id="description-2">
+          <p>
+            Perfect for keto diets, Valleysure MCT Oil helps reduce fatigue, supports weight management, and improves brain function. Ideal for adding to coffee, smoothies, or salads.
+          </p>
+        </div>
+        <div class="tab-panel" id="ingredients-2">
+          <ul>
+            <li>Caprylic Acid (C8) – 60%</li>
+            <li>Capric Acid (C10) – 40%</li>
+            <li>Source: Coconut Oil</li>
+          </ul>
+        </div>
+        <div class="tab-panel" id="reviews-2">
+          <div class="reviews-container">
+            <div class="review">
+              <p>"I feel more energized throughout the day. Great product!"</p>
+              <span>- Priya R.</span>
+            </div>
+            <div class="review">
+              <p>"Perfect for my keto diet. No taste, just results!"</p>
+              <span>- Rahul D.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="product-actions">
+      <div class="quantity-selector">
+        <button class="decrease">-</button>
+        <input type="number" value="1" min="1" />
+        <button class="increase">+</button>
+      </div>
+      <button class="add-to-cart"
+        data-id="7"
+        data-name="MCT Oil"
+        data-price="338.00"
+        data-image="images/mct oil.png">
+        Add to Cart
+      </button>
+    </div>
+  </div>
+</article>
+
+
+
+        <!-- Additional product-detail blocks can be added below -->
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>Valleysure Nutrition</h3>
+        <ul>
+          <li><a href="index.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="product.html">Products</a></li>
+          <li><a href="blogs.html">Blogs</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Health &amp; Fitness</h3>
+        <ul>
+          <li><a href="#">Hair &amp; Skin Care</a></li>
+          <li><a href="#">Sports Nutrition</a></li>
+          <li><a href="#">Wellness</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#">My Account</a></li>
+          <li><a href="#">Store Locator</a></li>
+          <li><a href="#">FAQs</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <p>
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:valleysurehealth@gmail.com">valleysurehealth@gmail.com</a>
+        </p>
+        <p>
+          <i class="fas fa-phone"></i>
+          <a href="tel:917774825554">+91 777 482 5554</a>
+        </p>
+       <!-- <p>
+          <i class="fas fa-map-marker-alt"></i>
+          Unit No. 713, Devika Tower, New Delhi
+        </p> -->
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <ul>
+        <li><a href="#">Terms &amp; Conditions</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Return Policy</a></li>
+      </ul>
+      <p>&copy; 2025 valleysurenutrition.in</p>
+    </div>
+  </footer>
+
+  
+  <!-- Include the shared JavaScript file -->
+  <script src="script.js" defer></script>
+  <script src="optimized-script.js" defer></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+  // ✅ Hamburger Menu Logic — This was wrongly placed inside the tab event
+  const hamburger = document.getElementById("hamburger");
+  const navLinks = document.querySelector(".nav-links");
+
+  if (hamburger && navLinks) {
+    hamburger.addEventListener("click", function () {
+      navLinks.classList.toggle("active");
+      document.body.classList.toggle("menu-open");
+      hamburger.classList.toggle("active");
+    });
+  }
+
+document.addEventListener('DOMContentLoaded', () => {
+  const slides = document.querySelectorAll('.slide');
+  let currentIndex = 0;
+  const slideInterval = 3000; // 3 seconds
+
+  function showSlide(index) {
+    slides.forEach((slide, idx) => {
+      slide.classList.toggle('active', idx === index);
+    });
+  }
+
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % slides.length; // Loops to 0 after last
+    showSlide(currentIndex);
+  }
+
+  showSlide(currentIndex); // Ensure first image is visible at load
+  setInterval(nextSlide, slideInterval);
+});
+
+
+  // Select all tab elements within each product details container
+  const tabElements = document.querySelectorAll(".product-details-tabs .tab");
+
+  if (tabElements.length === 0) {
+    console.warn("No tab elements found under .product-details-tabs");
+    return;
+  }
+
+  tabElements.forEach(function (tab) {
+    tab.addEventListener("click", function () {
+      // Remove active class from all sibling tabs
+      const tabsContainer = tab.parentElement;
+      tabsContainer.querySelectorAll(".tab").forEach(function (t) {
+        t.classList.remove("active");
+      });
+      tab.classList.add("active");
+
+      // Find the closest container that holds both the tabs and panels
+      const detailsContainer = tab.closest(".product-details-tabs");
+      if (!detailsContainer) {
+        console.error("The clicked tab is not within a .product-details-tabs container");
+        return;
+      }
+
+      // Remove active state from all tab panels within this container
+      detailsContainer.querySelectorAll(".tab-panel").forEach(function (panel) {
+        panel.classList.remove("active");
+      });
+
+      // Get the target panel ID from the clicked tab's data-tab attribute
+      const targetPanelId = tab.getAttribute("data-tab");
+      if (!targetPanelId) {
+        console.error("No data-tab attribute found on clicked tab");
+        return;
+      }
+
+
+
+    
+
+      // Find the panel with the matching id and add the 'active' class
+      const targetPanel = detailsContainer.querySelector("#" + targetPanelId);
+      if (targetPanel) {
+        targetPanel.classList.add("active");
+      } else {
+        console.error("No tab panel found with id:", targetPanelId);
+      }
+    });
+  });
+});
+
+  </script>
+</body>
+</html>

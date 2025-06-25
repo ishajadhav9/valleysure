@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- ✅ Favicon for search/browser tab -->
+  <link rel="icon" href="images/favicon.png" type="favicon.png"/>
+    <link rel="canonical" href="https://valleysurenutrition.in/blogs.html">
+  <title>VALLEYSURE NUTRITION BLOGS | Insights, Trends & Stories</title>
+  <meta name="description" content="Explore our sleek, modern blog featuring lifestyle insights, fashion tips, tech trends, and expert advice. Discover curated articles that inspire your journey.">
+<link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Elegant Lifestyle Blog | Insights, Trends & Stories">
+  <meta property="og:description" content="Explore our sleek, modern blog featuring lifestyle insights, fashion tips, tech trends, and expert advice.">
+  <meta property="og:image" content="https://example.com/images/og-blog.jpg">
+  <meta property="og:url" content="https://example.com/blog">
+  <meta property="og:type" content="website">
+
+  <!-- Structured Data (JSON-LD) for Blog -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Elegant Lifestyle Blog",
+    "description": "A modern, elegant blog featuring lifestyle insights, fashion tips, and tech trends for the modern reader.",
+    "url": "https://example.com/blog",
+    "blogPost": [
+      {
+        "@type": "BlogPosting",
+        "headline": "Elegant Fashion Trends for the Modern Era",
+        "description": "Discover the essence of style with our guide to chic evolution in modern fashion.",
+        "image": "https://example.com/images/blog1.jpg",
+        "datePublished": "2023-08-15",
+        "author": {
+          "@type": "Person",
+          "name": "Alex Designer"
+        }
+      }
+      /* Additional blog posts structured similarly */
+    ]
+  }
+  </script>
+<style src="styles.css"></style>
+  <!-- Internal CSS -->
+  <style>
+    /* ================================
+       GLOBAL STYLES & RESET
+    ================================ */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+
+      background: #ffffff;
+      color: #333;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    a { text-decoration: none; color: inherit; transition: color 0.3s ease; }
+    a:hover { color: #0073e6; }
+    img { max-width: 100%; height: auto; display: block; }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 0;
+    }
+
+    @media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #fff;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 999;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  #hamburger {
+    display: block;
+    cursor: pointer;
+    padding: 10px;
+  }
+
+  #hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #0073e6;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+  }
+
+  #hamburger.active div:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  #hamburger.active div:nth-child(2) {
+    opacity: 0;
+  }
+  #hamburger.active div:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+}
+
+    /* ================================
+       HERO BANNER
+    ================================ */
+    .hero-banner {
+      margin-left: 2rem;
+      margin-top: 20px;
+      position: relative;
+      height: 70vh;
+      background: url("images/blog banner.jpg") no-repeat center center/cover;
+      width: 90%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+
+
+    .hero-content {
+  
+      position: relative;
+      z-index: 1;
+      color: #fff;
+      max-width: 600px;
+      padding: 1rem;
+    }
+    
+    .hero-content h1 {
+      font-size: 2rem;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+    .hero-content p {
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .cta-btn {
+      display: inline-block;
+      background: #27ae60;
+      color: #fff;
+      padding: 1rem 2rem;
+      border-radius: 30px;
+      transition: background 0.3s ease;
+    }
+    .cta-btn:hover { background: #1e8449; }
+
+    /* ================================
+       SEARCH & FILTER BAR
+    ================================ */
+    .filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 2rem 0;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .filter-bar input[type="search"] {
+      flex: 1;
+      padding: 0.8rem;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+    .filter-options {
+      display: flex;
+      gap: 1rem;
+    }
+    .filter-options select {
+      padding: 0.8rem;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    /* ================================
+       MAIN CONTENT & SIDEBAR
+    ================================ */
+    .main-content {
+      display: flex;
+      gap: 2rem;
+      align-items: flex-start;
+      margin-bottom: 4rem;
+    }
+    /* Blog Grid */
+    .blog-grid {
+      flex: 3;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    .blog-card {
+      background: #fff;
+      border-radius: 1px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s ease;
+    }
+    .blog-card:hover { transform: translateY(-5px); }
+    .blog-card img { height: 180px; object-fit: cover; }
+    .card-content { padding: 1rem; flex: 1; display: flex; flex-direction: column; }
+    .blog-card h2 {
+      font-size: 1.2rem;
+      font-weight: 80;
+      margin-bottom: 0.5rem;
+      color: #0073e6;
+    }
+    .blog-card p {
+      font-size: 0.95rem;
+      margin-bottom: 0.5rem;
+      line-height: 1.4;
+      color: #666;
+      text-align: justify;
+    }
+    .blog-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.85rem;
+      color: #999;
+    }
+    .blog-footer time { font-size: 0.85rem; }
+    .blog-footer .tags { font-size: 0.85rem; }
+
+    /* Sidebar */
+    .sidebar {
+      flex: 1;
+      border-left: 1px solid #ddd;
+      padding-left: 2rem;
+    }
+    .sidebar section { margin-bottom: 2rem; }
+    .sidebar h3 {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      color: #0073e6;
+    }
+    .sidebar ul { list-style: none; }
+    .sidebar ul li { margin-bottom: 0.8rem; }
+    .sidebar .newsletter {
+      background: #fff;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .sidebar .newsletter input[type="email"] {
+      width: calc(100% - 2rem);
+      padding: 0.7rem;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+    .sidebar .newsletter button {
+      display: block;
+      width: 100%;
+      padding: 0.7rem;
+      margin-top: 0.7rem;
+      border: none;
+      background: #27ae60;
+      color: #fff;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .sidebar .newsletter button:hover { background: #1e8449; }
+
+    /* ================================
+       PAGINATION / LOAD MORE
+    ================================ */
+    .pagination {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .pagination button {
+      padding: 0.8rem 1.5rem;
+      border: none;
+      background: #0073e6;
+      color: #fff;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .pagination button:hover { background: #005bb5; }
+
+    /* ================================
+       FAQ SECTION
+    ================================ */
+    .faq-section {
+      margin: 4rem 0;
+      padding: 2rem;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+    .faq-section h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      font-size: 2rem;
+      color: #0073e6;
+    }
+    .faq-item {
+      margin-bottom: 1.2rem;
+      border-bottom: 1px solid #ddd;
+      cursor: pointer;
+      padding: 0.8rem 0;
+      transition: background 0.3s;
+    }
+    .faq-item:hover { background: rgba(0,115,230,0.05); }
+    .faq-question {
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+    .faq-answer {
+      display: none;
+      padding-top: 0.8rem;
+      font-size: 1rem;
+      color: #555;
+    }
+    .faq-item.active .faq-answer { display: block; }
+
+    /* ================================
+       RESPONSIVE DESIGN
+    ================================ */
+    @media (max-width: 1024px) {
+      .main-content { flex-direction: column; }
+      .sidebar { border-left: none; padding-left: 0; margin-top: 2rem; }
+    }
+    @media (max-width: 768px) {
+        .hero-banner {
+ display: none;
+  }
+      .hero-content h1 { font-size: 2.2rem;  margin-top: 20px !important;}
+      .hero-content p { font-size: 1rem; }
+      .blog-grid { gap: 1.5rem; }
+      .blog-card { padding: 0.8rem; }
+      .filter-bar { flex-direction: column; gap: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/favicon.png" alt="Valleysure Nutrition Logo" />
+      </a>
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html" >About Us</a></li>
+        <li><a href="product.html">Products</a></li>
+        <li><a href="blogs.html" class="active">Blogs</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li>
+          <a href="checkout.html" aria-label="Go to Checkout">
+            <i class="fas fa-shopping-cart"></i>
+            <span id="cart-count"></span>
+          </a>
+        </li>
+      </ul>
+      <div id="hamburger" class="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+
+    </nav>
+  </header>
+
+  <!-- HERO BANNER -->
+  <header class="hero-banner" img src="images/hero-banner.jpg" alt="Valleysure Nutrition Hero Banner" loading="lazy">
+    <div class="hero-content">
+      <h1></h1>
+      <p></p>
+   </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="container">
+    <!-- SEARCH & FILTER BAR -->
+    <section class="filter-bar">
+      
+      <div class="filter-options">
+        <select name="category" id="category">
+          <option value="">All Categories</option>
+        </select>
+      </div>
+    </section>
+
+    <!-- CONTENT: BLOG GRID & SIDEBAR -->
+    <div class="main-content">
+      <!-- BLOG GRID: 10 Blog Post Previews -->
+      <section class="blog-grid" id="blogs">
+       <!-- Blog Card 1: Valleysure High Protein -->
+<article class="blog-card" itemscope itemtype="https://schema.org/BlogPosting">
+
+  
+  <!-- Additional meta properties -->
+  <meta itemprop="mainEntityOfPage" content="https://example.com/blog1.html">
+  <meta itemprop="publisher" content="Valleysure Blog">
+  <meta itemprop="author" content="Valleysure Team">
+  
+  <img src="images/blo5.jpg" 
+       alt="Valleysure High Protein supplement bottle on a sleek, modern background" 
+       loading="lazy" 
+       itemprop="image">
+  <div class="card-content">
+    <h2 itemprop="headline">
+      <a href="blog1.html">Best High Protein Supplement in Virar for Recovery & Wellness | Valleysure®</a>
+    </h2>
+    <p itemprop="description">
+      Discover why Valleysure® High Protein with 44% whey protein, HMB, and diabetic-safe formulation is Virar’s most trusted supplement for muscle recovery and clinical nutrition.
+    </p>
+    <div class="blog-footer">
+      <time datetime="2023-09-05" itemprop="datePublished">Sep 05, 2023</time>
+      <div class="tags" itemprop="keywords">High Protein, Virar, Wellness, Clinical Nutrition</div>
+    </div>
+  </div>
+</article>
+
+<!-- Blog Card 2: Valleysure Diabetes Care -->
+<article class="blog-card" itemscope itemtype="https://schema.org/BlogPosting">
+  <meta itemprop="mainEntityOfPage" content="https://example.com/blog2.html">
+  <meta itemprop="publisher" content="Valleysure Blog">
+  <meta itemprop="author" content="Valleysure Team">
+  
+  <img src="images/blo2.jpg" 
+       alt="Valleysure Diabetes Care product with clear nutritional information in Virar" 
+       loading="lazy" 
+       itemprop="image">
+  <div class="card-content">
+    <h2 itemprop="headline">
+      <a href="blog2.html">Top Diabetes Supplement in Virar | Valleysure® Low GI Nutrition for Blood Sugar</h1></a>
+    </h2>
+    <p itemprop="description">
+      Managing diabetes effectively goes beyond cutting sugar—it's about daily nutrition that works *with* your body. In Virar, health-conscious consumers trust Valleysure Diabetes Care for one big reason: results.
+    </p>
+    <div class="blog-footer">
+      <time datetime="2023-08-28" itemprop="datePublished">Aug 28, 2023</time>
+      <div class="tags" itemprop="keywords">Diabetes Care, Virar, Low GI, Nutritional Support</div>
+    </div>
+  </div>
+</article>
+
+<!-- Blog Card 3: Valleysure BLCD -->
+<article class="blog-card" itemscope itemtype="https://schema.org/BlogPosting">
+  <meta itemprop="mainEntityOfPage" content="https://example.com/blog3.html">
+  <meta itemprop="publisher" content="Valleysure Blog">
+  <meta itemprop="author" content="Valleysure Team">
+  
+  <img src="images/blo4.jpg" 
+       alt="Valleysure BLCD serving as a meal replacement for weight management in Virar" 
+       loading="lazy" 
+       itemprop="image">
+  <div class="card-content">
+    <h2 itemprop="headline">
+      <a href="blog3.html">Valleysure BLCD: Virar’s Trusted Companion for Sustainable Weight Management</a></h2>
+    <p itemprop="description">
+     Obesity and weight management are growing concerns in Virar, prompting many to seek effective, science-backed solutions. Valleysure BLCD emerges as the trusted choice—a supplement that not only replaces calorie-dense meals but also supports metabolism and curbs cravings.
+
+A Local Legacy Produced by the renowned Valleysure Nutrition Pvt. Ltd. in Virar (West), BLCD is designed specifically for Indian lifestyles. It seamlessly integrates into busy routines, offering a nutritious alternative when traditional meals prove too heavy.
+    </p>
+    <div class="blog-footer">
+      <time datetime="2023-08-20" itemprop="datePublished">Aug 20, 2023</time>
+      <div class="tags" itemprop="keywords">Weight Management, BLCD, Low Calorie, Virar</div>
+    </div>
+  </div>
+</article>
+
+<!-- Blog Card 4: Valleysure MCT Oil -->
+<article class="blog-card" itemscope itemtype="https://schema.org/BlogPosting">
+  <meta itemprop="mainEntityOfPage" content="https://example.com/blog4.html">
+  <meta itemprop="publisher" content="Valleysure Blog">
+  <meta itemprop="author" content="Valleysure Team">
+  
+  <img src="images/blog3.jpg" 
+       alt="Valleysure MCT Oil bottle with a background suggesting energy and gut health in Virar" 
+       loading="lazy" 
+       itemprop="image">
+  <div class="card-content">
+    <h2 itemprop="headline">
+      <a href="blog4.html">Valleysure MCT Oil: The Smart Choice for Energy, Weight Loss & Gut Health in Virar</a>
+    </h2>
+    <p itemprop="description">
+      In Virar, where health and fitness trends are on the rise, Valleysure MCT Oil is capturing attention as a versatile supplement that fuels energy and enhances gut health. Whether you’re into keto dieting or simply looking for a natural way to sustain energy throughout the day, this MCT oil stands out as a viable.
+
+Quality You Can Trust Sourced 100% pure coconut oil, Valleysure MCT Oil contains medium-chain triglycerides (MCTs) that are rapidly absorbed—and converted by the liver into clean, efficient energy. Its formulation is ideal for weight loss, enhanced mental performance, and optimal digestive function.
+    </p>
+    <div class="blog-footer">
+      <time datetime="2023-08-15" itemprop="datePublished">Aug 15, 2023</time>
+      <div class="tags" itemprop="keywords">MCT Oil, Energy Booster, Gut Health, Virar</div>
+    </div>
+  </div>
+</article>
+
+       
+       
+        <!-- BLOG CARD 1 -->
+        <article class="blog-card" itemscope itemtype="https://schema.org/BlogPosting">
+          <img src="images/portrait-smiley-female-health-worker.jpg" alt="Elegant Fashion Trends" loading="lazy">
+          <div class="card-content">
+            <h2 itemprop="headline"><a href="blog1.html">Nutrition for Elderly Recovery: Why Protein Matters More Than Ever</a></h2>
+            <p itemprop="description">As We Age, Healing Takes Longer
+Older adults face more challenges after surgery, illness, or injury. Their bodies don’t bounce back as quickly. The reason? Natural loss of muscle mass (sarcopenia) and a slower metabolism.
+That’s why high-quality, digestible protein is essential during recovery. And not just any protein—one designed to meet the unique nutritional needs of seniors.
+</p>
+            <div class="blog-footer">
+              <time datetime="2023-08-15" itemprop="datePublished">Aug 15, 2023</time>
+              <div class="tags">Fashion, Style</div>
+            </div>
+          </div>
+        </article>
+        <!-- BLOG CARD 2 -->
+        <article class="blog-card" itemscope itemtype="https://schema.org/BlogPosting">
+          <img src="images/blo6.jpg" alt="Tech Innovations Shaping Our Future" loading="lazy">
+          <div class="card-content">
+            <h2 itemprop="headline"><a href="blog2.html">Valleysure Fibre – The Smart Fibre Supplement for Gut Health, Diabetes & Cholesterol</a></h2>
+            <p itemprop="description">According to the Indian Council of Medical Research (ICMR), adults need at least 40 grams of dietary fibre daily for optimal digestive health. But most of us barely reach half of that.
+Enter Valleysure Fibre – a gluten-free, acid-heat-freeze stable, soluble and insoluble fibre blend that’s tasteless, colorless, and odourless. You can mix it in water, milk, juice, or even soft foods—without changing the taste or texture.
+</p>
+            <div class="blog-footer">
+              <time datetime="2023-08-10" itemprop="datePublished">Aug 10, 2023</time>
+              <div class="tags">Tech, Innovation</div>
+            </div>
+          </div>
+        </article>
+                <!-- BLOG CARD 4 -->
+        <article class="blog-card" itemscope itemtype="https://schema.org/BlogPosting">
+          <img src="images/blo6.jpg" alt="Sustainable Fashion: A Guide to Ethical Style" loading="lazy">
+          <div class="card-content">
+            <h2 itemprop="headline"><a href="blog4.html">Managing Diabetes Naturally with Valleysure: A Smart, Protein-Rich Meal Between Meals</a></h2>
+            <p itemprop="description">Did you know that over 101 million Indians live with diabetes? That’s more than 11% of the population, and the numbers are rising. Managing diabetes isn’t just about cutting sugar—it’s about getting the right nutrition at the right time.
+That’s where Valleysure® Diabetes Care steps in: a scientifically designed, low-GI, high-protein supplement that helps maintain blood sugar, boost energy, and support overall diabetic health.
+</p>
+            <div class="blog-footer">
+              <time datetime="2023-07-20" itemprop="datePublished">Jul 20, 2023</time>
+              <div class="tags">Health</div>
+            </div>
+          </div>
+        </article>
+        <!-- BLOG CARD 3 -->
+        <article class="blog-card" itemscope itemtype="https://schema.org/BlogPosting">
+          <img src="images/blog7.jpg" alt="Lifestyle Hacks to Boost Your Daily Routine" loading="lazy">
+          <div class="card-content">
+            <h2 itemprop="headline"><a href="blog3.html">Recovering from Tuberculosis? Here’s the Protein Supplement Doctors Recommend</a></h2>
+            <p itemprop="description">Tuberculosis takes a toll on the body—but it doesn’t have to take your strength. Valleysure High Protein gives you the tools to fight back and rebuild your life, one scoop at a time.</p>
+            <div class="blog-footer">
+              <time datetime="2023-07-30" itemprop="datePublished">Jul 30, 2023</time>
+              <div class="tags">Lifestyle, Tips</div>
+            </div>
+          </div>
+        </article>
+
+        <!-- BLOG CARD 5 -->
+        <article class="blog-card" itemscope itemtype="https://schema.org/BlogPosting">
+          <img src="images/blo4.jpg" alt="The Future of Smart Homes" loading="lazy">
+          <div class="card-content">
+            <h2 itemprop="headline"><a href="blog5.html">Lose Weight with Diabetes? Yes, It’s Possible—with the Right Protein</a></h2>
+            <p itemprop="description">Explore the latest trends and technologies which are redefining modern smart home design.</p>
+            <div class="blog-footer">
+              <time datetime="2023-07-10" itemprop="datePublished">Jul 10, 2023</time>
+              <div class="tags">Tech, Home</div>
+            </div>
+          </div>
+        </article>
+        <!-- BLOG CARD 6 -->
+        <article class="blog-card" itemscope itemtype="https://schema.org/BlogPosting">
+          <img src="images/portrait-smiley-female-health-worker.jpg" alt="How to Curate Your Personal Style" loading="lazy">
+          <div class="card-content">
+            <h2 itemprop="headline"><a href="blog6.html">How to Curate Your Personal Style</a></h2>
+            <p itemprop="description">You can lose weight even with diabetes—when you work with your body, not against it. Valleysure helps you stay nourished, control cravings, and support metabolism in the safest way possible.</p>
+            <div class="blog-footer">
+              <time datetime="2023-06-28" itemprop="datePublished">Jun 28, 2023</time>
+              <div class="tags">Health</div>
+            </div>
+          </div>
+        </article>
+        <!-- BLOG CARD 7 -->
+        <article class="blog-card" itemscope itemtype="https://schema.org/BlogPosting">
+          <img src="images/blo4.jpg" alt="Digital Detox: Reclaiming Your Time" loading="lazy">
+          <div class="card-content">
+            <h2 itemprop="headline"><a href="blog7.html">Digital Detox: Reclaiming Your Time</a></h2>
+            <p itemprop="description">Discover how disconnecting can boost creativity and enhance your mental well‑being.</p>
+            <div class="blog-footer">
+              <time datetime="2023-06-15" itemprop="datePublished">Jun 15, 2023</time>
+              <div class="tags">Lifestyle, Wellness</div>
+            </div>
+          </div>
+        </article>
+        <!-- BLOG CARD 8 -->
+        <article class="blog-card" itemscope itemtype="https://schema.org/BlogPosting">
+          <img src="images/blog1.jpg" alt="The Intersection of Art and Fashion" loading="lazy">
+          <div class="card-content">
+            <h2 itemprop="headline"><a href="blog8.html">Nourish Your Nerves: Nutrition for Diabetic Neuropathy Starts Here</a></h2>
+            <p itemprop="description">Tingling feet. Burning sensations. Numb toes. These are common signs of diabetic neuropathy—a nerve condition caused by years of high blood sugar.
+But there’s hope. Along with blood sugar control, targeted nutrition can help support your nerves and reduce the damage.
+</p>
+            <div class="blog-footer">
+              <time datetime="2023-06-01" itemprop="datePublished">Jun 01, 2023</time>
+              <div class="tags">Health, nutrition</div>
+            </div>
+          </div>
+        </article>
+        <!-- BLOG CARD 9 -->
+        <article class="blog-card" itemscope itemtype="https://schema.org/BlogPosting">
+          <img src="images/blo2.jpg" alt="Emerging Tech: Trends to Watch" loading="lazy">
+          <div class="card-content">
+            <h2 itemprop="headline"><a href="blog9.html">Valleysure Nutrition: Revolutionizing Clinical Nutrition from Mumbai to the World</a></h2>
+            <p itemprop="description">Located in the heart of Mumbai, Valleysure Nutrition Pvt. Ltd. is not just another supplement company—it's a healthcare innovation hub. With a clear mission to elevate clinical outcomes through targeted nutrition, Valleysure is redefining how enteral nutrition is delivered in hospitals and homes alike.
+Our Mission and Vision
+At Valleysure, we believe nutrition is the first step toward healing. Our mission is to develop inclusive, science-backed nutritional solutions that cater to a wide range of clinical needs—right from ICU recovery to chronic illness management.
+</p>
+            <div class="blog-footer">
+              <time datetime="2023-05-20" itemprop="datePublished">May 20, 2023</time>
+              <div class="tags">Tech, Innovation</div>
+            </div>
+          </div>
+        </article>
+        <!-- BLOG CARD 10 -->
+        <article class="blog-card" itemscope itemtype="https://schema.org/BlogPosting">
+          <img src="images/blog3.jpg" alt="Ultimate Guide to Minimalist Living" loading="lazy">
+          <div class="card-content">
+            <h2 itemprop="headline"><a href="blog10.html">Why Peptide-Based Nutrition Is Critical for ICU Recovery</a></h2>
+            <p itemprop="description">When patients are critically ill, their bodies are fighting on multiple fronts—and digestive capacity is often compromised. In the ICU, gastrointestinal (GI) dysfunction is not just common; it’s expected.
+That’s why doctors don’t just prescribe food—they prescribe formulas. And not just any formula, but one that’s easily absorbed, fast-acting, and designed for compromised guts.
+</p>
+            <div class="blog-footer">
+              <time datetime="2023-05-10" itemprop="datePublished">May 10, 2023</time>
+              <div class="tags">Lifestyle, Minimalism</div>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+        <!-- Latest Posts -->
+        <section class="latest-posts">
+          <h3>Latest Posts</h3>
+          <ul>
+            <li><a href="#">Best Protein Supplement for Diabetics in India (2025 Guide)</a></li>
+            <li><a href="#">Clinical Nutrition vs Regular Supplements: What’s the Difference?</a></li>
+            <li><a href="#">How to Manage Blood Sugar Naturally with Nutrition</a></li>
+            <li><a href="#">Lifestyle Hacks to Boost Your Daily Routine</a></li>
+            <li><a href="#">Top 5 Supplements for Senior Recovery Post-Hospitalization</a></li>
+            <li><a href="#">What is the Best Protein Supplement for Diabetics in India?</a></li>
+            <li><a href="#">Why is Diabetes Treatment so Difficult?</a></li>
+            <li><a href="#">Top 5 Supplements for Senior Recovery Post-Hospitalization</a></li>
+            <li><a href="#">Why Gut Health Affects Blood Sugar (And How to Fix It)</a></li>
+            <li><a href="#">Fibre and Diabetes: The Underrated Connection</a></li>
+            <li><a href="#">High-Protein Indian Breakfast Ideas for Diabetics</a></li>
+            <li><a href="#">How MCT Oil Helps with Energy, Weight, and Focus</a></li>
+            <li><a href="#"></a></li>
+          </ul>
+        </section>
+        <!-- Newsletter Subscription -->
+        <section class="newsletter">
+          <h3>Newsletter</h3>
+          <p>Subscribe to receive the latest updates and insights.</p>
+          <form action="#" method="post">
+            <input type="email" placeholder="Your email" required>
+            <button type="submit">Subscribe</button>
+          </form>
+        </section>
+        <!-- Trending Topics -->
+        <section class="trending-topics">
+          <h3>Trending Topics</h3>
+          <ul>
+            <li><a href="#">buy supplements online India</a></li>
+            <li><a href="#">diabetic protein powder India</a></li>
+            <li><a href="#">meal replacement shake India</a></li>
+            <li><a href="#">nutrition for recovery India</a></li>
+            <li><a href="#">Valleysure supplements</a></li>
+            <li><a href="#">diabetes care</a></li>
+            <li><a href="#">weight management</a></li>
+            <li><a href="#">healthy lifestyle</a></li>
+            <li><a href="#">low GI supplement Indiae</a></li>
+            <li><a href="#">natural supplements to manage blood sugar in India</a></li>
+            <li><a href="#">best protein for elderly in India</a></li>
+            <li><a href="#">meal replacement shake for weight control</a></li>
+            <li><a href="#">MCT oil for weight loss</a></li>
+            <li><a href="#">fibre supplement India</a></li>
+            <li><a href="#">high-protein drink for parents over 60</a></li>
+            <li><a href="#">best nutrition for weak seniors post illness</a></li>
+
+          </ul>
+        </section>
+      </aside>
+    </div>
+
+    <!-- PAGINATION / LOAD MORE -->
+    <div class="pagination">
+      <button>Load More</button>
+    </div>
+
+    <!-- FAQ SECTION -->
+    <section class="faq-section">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <div class="faq-question">What makes Valleysure Nutrition supplements unique?</div>
+        <div class="faq-answer">Valleysure Nutrition supplements are formulated using clinically researched ingredients, ensuring optimal absorption and maximum effectiveness. Unlike generic brands, our products are tailored for specific health goals—such as immunity, muscle gain, diabetes support, and overall wellness—making them a trusted choice for both fitness enthusiasts and health-conscious individuals.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Are Valleysure products safe and approved for regular use?</div>
+        <div class="faq-answer">Yes, all Valleysure products are manufactured in GMP-certified facilities and are FSSAI compliant. Our supplements undergo strict quality checks and are free from banned substances, artificial fillers, and harmful additives. They're safe for daily use when taken as directed.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Do you offer supplements specifically for diabetes care and weight management?</div>
+        <div class="faq-answer">Absolutely. Our Valleysure Diabetes Care line is specially designed to help regulate blood sugar levels while supporting weight management. It includes high-protein, low-GI formulations ideal for diabetic nutrition, helping users maintain energy levels and prevent neuropathy-related deficiencies.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">Where can I buy Valleysure Nutrition products online?</div>
+        <div class="faq-answer">You can order directly from our official website at valleysurenutrition.in for exclusive offers, fast shipping, and genuine products. We also offer a secure checkout process via Razorpay and provide COD (Cash on Delivery) options in select locations.
+
+</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">Is Valleysure Nutrition suitable for athletes and gym-goers?</div>
+        <div class="faq-answer">Yes, our High Protein and Performance Support supplements are crafted for muscle recovery, stamina, and lean muscle gain. Packed with essential amino acids and plant-based protein, Valleysure is ideal for athletes, bodybuilders, and anyone following an active lifestyle.</div>
+      </div>
+
+
+
+    </section>
+  </main>
+
+    <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>Valleysure Nutrition</h3>
+        <ul>
+          <li><a href="index.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="product.html">Products</a></li>
+          <li><a href="blogs.html">Blogs</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Health &amp; Fitness</h3>
+        <ul>
+          <li><a href="#">Hair &amp; Skin Care</a></li>
+          <li><a href="#">Sports Nutrition</a></li>
+          <li><a href="#">Wellness</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#">My Account</a></li>
+          <li><a href="#">Store Locator</a></li>
+          <li><a href="#">FAQs</a></li>
+        </ul>
+      </div>
+<div class="footer-section">
+        <h3>Contact Us</h3>
+        <p>
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:valleysurehealth@gmail.com">valleysurehealth@gmail.com</a>
+        </p>
+        <p>
+          <i class="fas fa-phone"></i>
+          <a href="tel:917774825554">+91 777 482 5554</a>
+        </p>
+       <!-- <p>
+          <i class="fas fa-map-marker-alt"></i>
+          Unit No. 713, Devika Tower, New Delhi
+        </p> -->
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <ul>
+        <li><a href="#">Terms &amp; Conditions</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Return Policy</a></li>
+      </ul>
+      <p>&copy; 2025 valleysurenutrition.in</p>
+    </div>
+  </footer>
+
+
+  <!-- Include the shared JavaScript file -->
+
+  <!-- JavaScript for FAQ Accordion -->
+  <script> 
+document.addEventListener("DOMContentLoaded", function () {
+  const hamburger = document.getElementById("hamburger");
+  const navLinks = document.querySelector(".nav-links");
+
+  if (hamburger && navLinks) {
+    hamburger.addEventListener("click", function () {
+      navLinks.classList.toggle("active");
+      document.body.classList.toggle("menu-open");
+      hamburger.classList.toggle("active");
+    });
+  }
+
+  // FAQ Accordion
+  document.querySelectorAll('.faq-item').forEach(item => {
+    item.addEventListener('click', function () {
+      const answer = this.querySelector('.faq-answer');
+      if (answer) {
+        answer.classList.toggle('show');
+        this.querySelector('.arrow')?.classList.toggle('active');
+      }
+    });
+  });
+});
+
+  </script>
+</body>
+</html>
